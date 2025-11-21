@@ -3,6 +3,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Header from './components/Header';
 import Controls from './components/Controls';
 import SlokaDisplay from './components/SlokaDisplay';
+import WhatsAppSubscribe from './components/WhatsAppSubscribe';
 import { SlokaResponse, LoadingState } from './types';
 import { fetchSlokaExplanation } from './services/geminiService';
 import { CHAPTERS } from './constants';
@@ -126,12 +127,20 @@ const App: React.FC = () => {
             <p>
               I realized I didn't just want to read about it; I wanted to live it. I wanted a way to bridge that 5,000-year-old wisdom with the emails, deadlines, and decisions of my 21st-century life. I built this app to be that bridge—a simple tool to access timeless clarity in the midst of modern chaos.
             </p>
-            <p className="font-medium text-orange-600 pt-6 text-xl serif-font italic">
-              "I hope you enjoy using it as much as I do."
-            </p>
+            <div className="pt-6">
+              <p className="font-medium text-orange-600 text-xl serif-font italic mb-3">
+                "I hope you enjoy using it as much as I do." 
+              </p>
+              <p className="text-gray-500 font-semibold tracking-wider uppercase text-sm">
+                — Devang Shah
+              </p>
+            </div>
           </div>
         </div>
       </section>
+      
+      {/* WhatsApp Subscription Section */}
+      <WhatsAppSubscribe />
 
       {/* Simple Footer */}
       <footer className="bg-gray-50 text-center text-gray-400 text-xs py-8 border-t border-gray-100">
